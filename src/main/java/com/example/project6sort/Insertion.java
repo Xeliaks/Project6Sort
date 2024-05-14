@@ -36,7 +36,7 @@ public class Insertion {
         printArray(arr1);
 
         String[] arr2 = {"banana", "apple", "orange", "grape", "pineapple", "mango", "watermelon", "strawberry", "cherry", "lemon" };
-        System.out.println("\nBefore sorting:");
+        System.out.println("Before sorting:");
         printArray(arr2);
         sort(arr2);
         System.out.println("After sorting:");

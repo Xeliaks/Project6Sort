@@ -60,7 +60,6 @@ public class Quick {
     }
 
     public static void main(String[] args) {
-        // Test cases
         Integer[] arr1 = { 13, 75, 12, 4, 18, 6, 9, 10, 7, 14, 15 };
         System.out.println("Before sorting:");
         printArray(arr1);

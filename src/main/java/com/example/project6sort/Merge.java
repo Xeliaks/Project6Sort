@@ -15,17 +15,15 @@ public class Merge {
     }
 
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
-        // Copy to aux[]
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
         }
 
-        // Merge back to a[]
         int i = lo, j = mid + 1;
         for (int k = lo; k <= hi; k++) {
-            if (i > mid) a[k] = aux[j++]; // left half exhausted
-            else if (j > hi) a[k] = aux[i++]; // right half exhausted
-            else if (less(aux[j], aux[i])) a[k] = aux[j++]; // current key on right less than current key on left
+            if (i > mid) a[k] = aux[j++];
+            else if (j > hi) a[k] = aux[i++];
+            else if (less(aux[j], aux[i])) a[k] = aux[j++];
             else a[k] = aux[i++];
         }
     }
@@ -50,7 +48,7 @@ public class Merge {
         printArray(arr1);
 
         String[] arr2 = {"banana", "apple", "orange", "grape", "pineapple", "mango", "watermelon", "strawberry", "cherry", "lemon" };
-        System.out.println("\nBefore sorting:");
+        System.out.println("Before sorting:");
         printArray(arr2);
         sort(arr2);
         System.out.println("After sorting:");
